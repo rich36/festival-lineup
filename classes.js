@@ -150,5 +150,38 @@ var Festival = function(name)
 		}
 		return performers;
 	}
+	
+	this.load_performances_by_date = function(start_date, end_date)
+	{
+		var data = new Array();
+		
+		for(var stageIndex = 0; stageIndex < this.stages.length; stageIndex++)
+		{
+			var currentStage = this.stages[stageIndex];
+			
+			var newStage = new Stage(currentStage.name);
+			
+			for(var performanceIndex = 0; performanceIndex < currentStage.performances.length; performanceIndex++)
+			{
+				var p = currentStage.performances[performanceIndex];
+				var current_performance_start_time = p.start_time;
+				var current_performance_end_time = new Date(p.start_time);
+				current_performance_end_time.setMinutes(p.start_time.getMinutes() + p.duration);
+				
+				if (current_performance_start_time <= start_date || current_performance_end_time <= end_date)
+				{
+					newStage.add_performance(p.artist, p.start_time, p.duration);
+				}
+			}
+			
+			if (newStage.performances.length > 0)
+			{
+				data.push(newStage);
+			}
+		}
+		
+		
+		return data;
+	}
 }
 

@@ -92,6 +92,55 @@ $(document).ready(function()
 	//var current_time = new Date();
 	//var current_time = new Date("December 21, 2012 12:00:00");
 	var current_time = new Date(2012, 7, 11, 20, 10);
+	
+	LoadNowPlaying(festival, current_time);
+	
+	var friday_start_date = new Date(2012, 7, 11, 12, 0);
+	var friday_end_date = new Date(2012, 7, 12, 5, 0);
+	LoadDayData(festival, friday_start_date, friday_end_date, $("#friday_list"), "Friday");
+	
+});
+
+function LoadDayData(festival, start_date, end_date, $container, label)
+{
+	var stages = festival.load_performances_by_date(start_date, end_date);
+	
+	/*
+	 <div  data-role="collapsible" data-collapsed="false">
+		<h3>
+			Charity Rocks! Stage One
+		</h3>
+		<div class="ui-grid-a">
+			<ul class='performer_list'>			
+		<li><span class="now_playing_name">Clark Manson Band</span><br>Charity Rocks! Stage One<br>8:00 PM</li><li><span class="now_playing_name">Electrobek</span><br>Indoor Stage<br>8:00 PM</li><li><span class="now_playing_name">Jack and Joe Waters</span><br>Acoustic Stage<br>8:00 PM</li></ul>
+		</div>
+	</div>
+	*/
+	for(var i = 0; i < stages.length; i++)
+	{
+		var stage = stages[i];
+		
+		var h = '<div data-role="collapsible" data-collapsed="false">';
+		// <h3>Stage Name</h3>
+		h += "<h3>" + stage.name + "</h3>";
+		
+		h += '<div class="ui-grid-a">'; // Start text container
+	
+		h += "<ul class='performer_list'>";
+		$.each(stage.performances, function(index, value) {
+			h += "<li>" + FormatPerformance(value) + "</li>";
+		});
+		h += "</ul>";
+		
+		h += "</div>"; // End text container
+		h += "</div>"; // end contaier div
+		$container.append(h);
+	}
+	
+}
+
+function LoadNowPlaying(festival, current_time)
+{
 	var response = festival.query_performance(current_time);
 	
 	var $outputElement = $('#nobody_playing_msg');
@@ -119,7 +168,7 @@ $(document).ready(function()
 		$outputElement.hide();
 		//$('#output').html($list.html());
 	}
-});
+}
 
 function FormatPerformance(performance)
 {
