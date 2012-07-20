@@ -168,7 +168,7 @@ var Festival = function(name)
 				var current_performance_end_time = new Date(p.start_time);
 				current_performance_end_time.setMinutes(p.start_time.getMinutes() + p.duration);
 				
-				if (current_performance_start_time <= start_date || current_performance_end_time <= end_date)
+				if (current_performance_start_time >= start_date && current_performance_end_time <= end_date)
 				{
 					newStage.add_performance(p.artist, p.start_time, p.duration);
 				}
