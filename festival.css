@@ -1,0 +1,17 @@
+
+
+.performer_list
+{
+	list-style: none;
+}
+
+.performer_list li
+{
+	margin-bottom: 12px;
+}
+
+/* Display of the now playing items */
+.now_playing_name
+{
+	font-weight: bold;
+}
