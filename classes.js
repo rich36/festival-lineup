@@ -11,10 +11,12 @@ var Artist = function(name, url, description)
 	this.description = description
 }
 
-var ArtistPerformance = function(artist, start_time)
+var ArtistPerformance = function(artist, start_time, duration, stage)
 {
 	this.artist = artist;
 	this.start_time = start_time;
+	this.duration = duration;
+	this.stage = stage;
 }
 
 var Stage = function(name)
@@ -23,10 +25,10 @@ var Stage = function(name)
 	this.performances = new Array();
 }
 
-Stage.prototype.add_performance = function(artist, start_time)
+Stage.prototype.add_performance = function(artist, start_time, duration)
 {
 	var self = this;
-	var ap = new ArtistPerformance(artist, start_time);
+	var ap = new ArtistPerformance(artist, start_time, duration, self);
 	self.performances.push(ap);
 	console.log("I have just added a new performance " + self.performances[self.performances.length - 1].artist.name + " at " + start_time);
 }
@@ -77,7 +79,7 @@ var Festival = function(name)
 		
 		// Get the current performers
 		response.performance_status = PERFORMANCE_STATUS.InProgress
-		
+		response.current_performances = this.get_current_performances(query_time);
 		
 		return response;
 	}
@@ -113,7 +115,7 @@ var Festival = function(name)
 			for(var performanceIndex = 0; performanceIndex < currentStage.performances.length; performanceIndex++)
 			{
 				var p = currentStage.performances[performanceIndex];
-				var current_performance_end_time = p.start_time + ((60 * 1000) * p.set_duration);
+				var current_performance_end_time = p.start_time + ((60 * 1000) * p.duration);
 				if (last_performance_end_time == null || current_performance_end_time > last_performance_end_time)
 				{
 					last_performance_end_time = current_performance_end_time;
@@ -126,6 +128,27 @@ var Festival = function(name)
 			has_ended = true;
 		}
 		return has_ended;
+	}
+	
+	this.get_current_performances = function(query_time)
+	{
+		var performers = new Array();
+		for(var stageIndex = 0; stageIndex < this.stages.length; stageIndex++)
+		{
+			var currentStage = this.stages[stageIndex];
+			for(var performanceIndex = 0; performanceIndex < currentStage.performances.length; performanceIndex++)
+			{
+				var p = currentStage.performances[performanceIndex];
+				var current_performance_start_time = p.start_time;
+				var current_performance_end_time = new Date(p.start_time);
+				current_performance_end_time.setMinutes(p.start_time.getMinutes() + p.duration)
+				if (query_time >= current_performance_start_time && query_time <= current_performance_end_time)
+				{
+					performers.push(p);
+				}
+			}
+		}
+		return performers;
 	}
 }
 
