@@ -1,8 +1,9 @@
 function get_festival_data()
 {
-	// Charity Stage
+	// *** Charity Stage
 	var charity_stage = new Stage('Charity Rocks! Stage One');
 	
+	// Friday
 	var ldap = new Artist('The Lee Dynes Acoustic Project', '', '');
 	charity_stage.add_performance(ldap, new Date(2012, 7, 11, 16, 00), 60);
 	
@@ -15,7 +16,11 @@ function get_festival_data()
 	var signsol = new Artist('Signs of Life', '', '');
 	charity_stage.add_performance(signsol, new Date(2012, 7, 11, 22, 00), 60);
 	
-	// WYSO Stage
+	// Saturday
+	var sl = new Artist('Scott Lee', '', '');
+	charity_stage.add_performance(sl, new Date(2012, 7, 12, 10, 30), 60);
+	
+	// *** WYSO Stage
 	var wyso_stage = new Stage("WYSO Stage");
 	
 	var nw = new Artist('Noah Wotherspoon', '', '');
@@ -30,9 +35,10 @@ function get_festival_data()
 	var sol =  new Artist('Glostik Willy', '', '');
 	wyso_stage.add_performance(sol, new Date(2012, 7, 12, 0, 00), 60);
 	
-	// Indoor Stage
+	// *** Indoor Stage
 	var indoor_stage = new Stage('Indoor Stage');
 	
+	// Friday
 	var mc = new Artist('Marc Cantwit', '', '');
 	indoor_stage.add_performance(mc, new Date(2012, 7, 11, 17, 00), 60);
 	
@@ -54,7 +60,7 @@ function get_festival_data()
 	var bmm = new Artist('Boogie Matrix Mechanism', '', 'Dancing band');
 	indoor_stage.add_performance(bmm, new Date(2012, 7, 12, 02, 00), 90);
 	
-	// Acoustic Stage
+	// *** Acoustic Stage
 	var acoustic_stage = new Stage("Acoustic Stage");
 	
 	var open_stage = new Artist('Open Stage', '', '');
@@ -96,8 +102,12 @@ $(document).ready(function()
 	LoadNowPlaying(festival, current_time);
 	
 	var friday_start_date = new Date(2012, 7, 11, 12, 0);
-	var friday_end_date = new Date(2012, 7, 12, 5, 0);
+	var friday_end_date = new Date(2012, 7, 12, 4, 59);
 	LoadDayData(festival, friday_start_date, friday_end_date, $("#friday_list"), "Friday");
+	
+	var saturday_start_date = new Date(2012, 7, 12, 5, 0);
+	var saturday_end_date = new Date(2012, 7, 13, 12, 0);
+	LoadDayData(festival, saturday_start_date, saturday_end_date, $("#saturday_list"), "Saturday");
 	
 });
 

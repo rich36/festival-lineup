@@ -30,7 +30,7 @@ Stage.prototype.add_performance = function(artist, start_time, duration)
 	var self = this;
 	var ap = new ArtistPerformance(artist, start_time, duration, self);
 	self.performances.push(ap);
-	console.log("I have just added a new performance " + self.performances[self.performances.length - 1].artist.name + " at " + start_time);
+	//console.log("I have just added a new performance " + self.performances[self.performances.length - 1].artist.name + " at " + start_time);
 }
 
 function PerformerQueryResponse()
