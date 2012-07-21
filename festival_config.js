@@ -17,7 +17,7 @@ var _fest_timing = {
 // setting a date here
 //_fest_timing.current_time = new Date(2012, 11, 21, 23, 59); // testing after the festival
 //_fest_timing.current_time = new Date(2012, 7, 10, 20, 10); // testing 
-_fest_timing.current_time = new Date(2012, 7, 10, 21, 59, 50); // testing  schedule change
+//_fest_timing.current_time = new Date(2012, 7, 10, 21, 59, 50); // testing  schedule change
 //_fest_timing.current_time = new Date(2012, 7, 11, 6, 0, 0); // testing no one playing
 
 var _fest_messages =  {
