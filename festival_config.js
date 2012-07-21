@@ -32,7 +32,24 @@ var _fest_sharing_info = {
 };
 
 // Festival Day Definitions
-
+// This section allows you to set what constitutes a day of the festival. The reason this exists is so late night sets 
+// can be considered part of the previous day even if they are after midnight.
+// The ID is the id of the page - make sure it's a valid, unique HTML element ID
+var _fest_days = 
+[
+	{
+		name : "Friday",
+		start_time : new Date(2012, 7, 10, 11, 0),
+		end_date : new Date(2012, 7, 11, 4, 59),
+		id : "friday"
+	},
+	{
+		name : "Saturday",
+		start_time : new Date(2012, 7, 11, 5, 0),
+		end_date : new Date(2012, 7, 12, 11, 0),
+		id : "saturday"
+	}
+];
 
 // *** End Configurable Values
 

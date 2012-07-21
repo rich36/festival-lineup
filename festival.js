@@ -11,7 +11,7 @@ $(document).ready(function()
 	LoadDocumentInformation($(this));
 	LoadShareInformation();
 	LoadNowPlaying(festival, current_time);
-	
+	LoadDays();
 	var friday_start_date = new Date(2012, 7, 10, 11, 0);
 	var friday_end_date = new Date(2012, 7, 11, 4, 59);
 	LoadDayData(festival, friday_start_date, friday_end_date, $("#friday_list"), "Friday");
@@ -20,6 +20,38 @@ $(document).ready(function()
 	var saturday_end_date = new Date(2012, 7, 12, 11, 0);
 	LoadDayData(festival, saturday_start_date, saturday_end_date, $("#saturday_list"), "Saturday");
 });
+
+function LoadDays()
+{
+	// Template for the list item that links to the day page
+	$.template( "lineup_list_item_template", 
+		"<li data-theme='a'><a href='#${id}' data-transition='slide'>${name}</a></li>" );
+	
+	// Template for the day page.
+	var page_template = "<div data-role='page' id='${id}'>" + // Open Page
+		"<div data-role='header'><h1 class='page_title'>Lineup</h1></div>" +
+		"<div data-role='content'>" + // Start Content
+		"<h2>Lineup - ${name}</h2>" +
+		"<div id='${name}_list' data-role='collapsible-set' data-theme='' data-content-theme=''></div>" +
+		"<p><a href='#home' data-direction='reverse' data-role='button' data-theme='b'>Back to home</a></p>	" +
+		"</div>" + // End Content
+		"<div data-role='footer'><h4 class='copyright'>&nbsp;</h4>" + // Start Footer
+		"<p class='footer_tagline'>Site by Rich of <a href='http://www.ninefalsesuns.com'>Nine False Suns</a></p>" +
+		"</div>" + // End Footer
+		"</div>"; // Close Page
+	$.template("lineup_day_template", page_template);
+	
+	var last_element_id = "home";
+	for(var i = 0; i < _fest_days.length; i++)
+	{
+		var item = _fest_days[i];
+		$.tmpl("lineup_list_item_template", item).appendTo("#lineup_days_list");
+		//$.tmpl("page_template", item).insertAfter("#" + last_element_id);
+		last_element_id = item.id;
+	}
+	
+	$("#lineup_days_list").listview('refresh');
+}
 
 function LoadDocumentInformation($doc)
 {
