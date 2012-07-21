@@ -22,11 +22,6 @@ $(document).ready(function()
 	}, _fest_timing.refresh_interval);
 });
 
-function TimerCalled()
-{
-	
-}
-
 function LoadDays(festival)
 {
 	// Template for the list item that links to the day page
@@ -89,6 +84,8 @@ function LoadDocumentInformation($doc)
 	$('.page_title').html(_fest_info.page_title);
 	
 	$('.copyright').html(_fest_info.copyright);
+	
+	$('#no_acts_currently_playing').text(_fest_messages.no_one_currently_playing);
 }
 
 function LoadShareInformation()
@@ -124,14 +121,24 @@ function LoadNowPlaying(festival, current_time)
 		var $list = $("#now_playing_list");
 		$list.empty();
 		
-		var list_data = "";
-		$.each(response.current_performances, function(index, value) {
-			list_data += "<li>" + FormatPerformance(value) + "</li>";
-		});
-		$list.append(list_data);
-	
+		if (response.current_performances.length > 0)
+		{
+			var list_data = "";
+			$.each(response.current_performances, function(index, value) {
+				list_data += "<li>" + FormatPerformance(value) + "</li>";
+			});
+			$list.append(list_data);
+			$list.show();
+			$('#no_acts_currently_playing').hide();
+		}
+		else
+		{
+			$('#no_acts_currently_playing').show();
+			$list.hide();
+		}
+		
 		$("#now_playing").show();
-			$outputElement.hide();
+		$outputElement.hide();
 		
 		$('#current_time').html(FormatTimeString(_fest_timing.current_time)); 
 		//$('#current_time').html(_fest_timing.current_time.toString()); // Good for debugging because it shows seconds
@@ -172,11 +179,11 @@ function FormatArtistName(artist)
 function ShowNotStartedMessage($element)
 {
 	$element.show();
-	$element.html(_fest_pre_festival_message);
+	$element.html(_fest_messages.pre_festival_message);
 }
 
 function ShowFinishedMessage($element)
 {
 	$element.show();
-	$element.html(_fest_post_festival_message);
+	$element.html(_fest_messages.post_festival_message);
 }

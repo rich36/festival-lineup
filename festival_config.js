@@ -10,10 +10,24 @@ artists and performances.
 // You can artifically adjust the start time to ensure that the lineup will render correctly at different times
 var _fest_timing = {
 	//current_time : new Date(), // USE THIS FOR PRODUCTION - Will be current date/time
-	//current_time : new Date(2012, 11, 21, 23, 59), // testing
-	//current_time : new Date(2012, 7, 10, 20, 10), // testing
-	current_time : new Date(2012, 7, 10, 21, 59, 50), // testing
+	//current_time : new Date(2012, 11, 21, 23, 59), // testing after the festival
+	//current_time : new Date(2012, 7, 10, 20, 10), // testing 
+	current_time : new Date(2012, 7, 10, 21, 59, 50), // testing  schedule change
+	//current_time : new Date(2012, 7, 11, 6, 0, 0), // testing no one playing
 	refresh_interval : 1000 // in milliseconds
+};
+
+var _fest_messages =  {
+	no_one_currently_playing : "No acts are currently playing. Please check the schedule for when the next act is playing.",
+	pre_festival_message : "<h2 style='text-align:center'>Miami Valley Music Fest</h2><div style='text-align: center;'>" + 
+		"<p style='font-weight: bold; font-size: larger;'>August 11th - 12th</p>" +
+		"<p><img src='images/mvmf.jpg' alt='Miami Valley Music Fest'/></p>" + 
+		"<p style='font-weight: bold;'><a href='http://www.miamivalleymusicfest.com/tickets/' target='_blank'>Buy Tickets Here</a></p>" +
+		"</div>",
+	post_festival_message : "<div style='text-align: center;'>" + 
+		"<p><img src='images/mvmf.jpg' alt='Miami Valley Music Fest'/></p>" + 
+		"<p style='font-weight: bold;font-size:large;'>Thank you! See you next year!</p>" +
+		"</div>"
 };
 
 var _fest_pre_festival_message = "<h2 style='text-align:center'>Miami Valley Music Fest</h2><div style='text-align: center;'>" + 
