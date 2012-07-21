@@ -182,8 +182,6 @@ function get_festival_data()
 
 }
 
-
-
 $(document).ready(function()
 {
 	var festival = get_festival_data();
@@ -202,6 +200,13 @@ $(document).ready(function()
 	var saturday_end_date = new Date(2012, 7, 12, 11, 0);
 	LoadDayData(festival, saturday_start_date, saturday_end_date, $("#saturday_list"), "Saturday");
 	
+	$('#share_links a').each(function() {
+		var url = $(this).attr('href');
+		url = url.replace("__url__","www.ninefalsesuns.com/lineup");
+		url = url.replace("__name__", "Miami Valley Music Fest Lineup");
+		url = url.replace("__description__", "Mobile site with the lineup for the 2012 Miami Valley Music Fest.");
+		$(this).attr('href', url);
+	});
 });
 
 function LoadDayData(festival, start_date, end_date, $container, label)
