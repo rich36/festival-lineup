@@ -3,24 +3,13 @@
 $(document).ready(function()
 {
 	var festival = get_festival_data();
-	
-	var current_time = new Date();
-	//var current_time = new Date(2012, 11, 21, 23, 59);
-	//var current_time = new Date(2012, 7, 10, 20, 10);
-	
-	LoadDocumentInformation($(this));
-	LoadShareInformation();
-	LoadNowPlaying(festival, current_time);
+
+	LoadNowPlaying(festival, _current_time);
 	LoadDays(festival);
-	/*
-	var friday_start_date = new Date(2012, 7, 10, 11, 0);
-	var friday_end_date = new Date(2012, 7, 11, 4, 59);
-	LoadDayData(festival, friday_start_date, friday_end_date, $("#friday_list"), "Friday");
+	LoadShareInformation();
 	
-	var saturday_start_date = new Date(2012, 7, 11, 5, 0);
-	var saturday_end_date = new Date(2012, 7, 12, 11, 0);
-	LoadDayData(festival, saturday_start_date, saturday_end_date, $("#saturday_list"), "Saturday");
-	*/
+	// Set this information last so that dynamic elements can get updated too
+	LoadDocumentInformation($(this));
 });
 
 function LoadDays(festival)
@@ -66,7 +55,6 @@ function LoadDayData(festival, start_date, end_date, $container, label)
 		var stage = stages[i];
 		
 		var h = '<div data-role="collapsible" data-collapsed="true">';
-		// <h3>Stage Name</h3>
 		h += "<h3>" + stage.name + "</h3>";
 		h += "<ul class='performer_list'>";
 		$.each(stage.performances, function(index, value) {
@@ -98,8 +86,6 @@ function LoadShareInformation()
 		$(this).attr('href', url);
 	});
 }
-
-
 
 function LoadNowPlaying(festival, current_time)
 {
@@ -171,5 +157,5 @@ function ShowNotStartedMessage($element)
 function ShowFinishedMessage($element)
 {
 	$element.show();
-	$element.html("Thank you to everyone who attended the festival.");
+	$element.html(_fest_post_festival_message);
 }
