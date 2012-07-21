@@ -4,18 +4,21 @@ config.js
 This file consists of all of the variables that can be changed in order to set up the site information, 
 artists and performances.
 
-*/
-// *** Start Configurable Values
+You must 
 
-// You can artifically adjust the start time to ensure that the lineup will render correctly at different times
+*/
+
 var _fest_timing = {
-	//current_time : new Date(), // USE THIS FOR PRODUCTION - Will be current date/time
-	//current_time : new Date(2012, 11, 21, 23, 59), // testing after the festival
-	//current_time : new Date(2012, 7, 10, 20, 10), // testing 
-	current_time : new Date(2012, 7, 10, 21, 59, 50), // testing  schedule change
-	//current_time : new Date(2012, 7, 11, 6, 0, 0), // testing no one playing
+	current_time : new Date(), 
 	refresh_interval : 1000 // in milliseconds
 };
+
+// You can artifically adjust the start time to ensure that the lineup will render correctly at different times by 
+// setting a date here
+//_fest_timing.current_time = new Date(2012, 11, 21, 23, 59); // testing after the festival
+//_fest_timing.current_time = new Date(2012, 7, 10, 20, 10); // testing 
+_fest_timing.current_time = new Date(2012, 7, 10, 21, 59, 50); // testing  schedule change
+//_fest_timing.current_time = new Date(2012, 7, 11, 6, 0, 0); // testing no one playing
 
 var _fest_messages =  {
 	no_one_currently_playing : "No acts are currently playing. Please check the schedule for when the next act is playing.",
@@ -74,8 +77,9 @@ var _fest_days =
 	}
 ];
 
-// *** End Configurable Values
+/*
 
+*/
 function get_festival_data()
 {
 	// *** Charity Stage
