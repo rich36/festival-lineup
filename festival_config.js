@@ -30,7 +30,21 @@ var _fest_messages =  {
 	post_festival_message : "<div style='text-align: center;'>" + 
 		"<p><img src='images/mvmf.jpg' alt='Miami Valley Music Fest'/></p>" + 
 		"<p style='font-weight: bold;font-size:large;'>Thank you! See you next year!</p>" +
-		"</div>"
+		"</div>",
+	about_page_text : "<p><a href='http://www.miamivalleymusicfest.com'>Miami Valley Music Fest</a></p>" +
+		"<p>The Miami Valley Music Festival Association is a 501(c)(3) public charity organized in Miami County, OH " +
+		"with the purpose of hosting music events to raise funds and awareness for local charitable causes. Their &quot;Charity Rocks!&quot; " + 
+		"initiative seeks to educate the public on opportunities to give back to the community, and expose younger " + 
+		"festival audiences to the public services offered by non-profit organizations. The MVMFA continually develops " +
+		"programming that shows how charitable giving cannot only be easy and accessible, but also fun.</p>" +
+		
+		"<h3>MISSION</h3>" +
+		
+		"<p>To gather people together to celebrate life in a way that is beneficial to themselves and their " + 
+		"community; to promote musical diversity, local artists, and charitable giving; and to enhance the mind, " +
+		"body, and spirit of all who attend the festival.</p>" +
+		
+		'<p><a href="#home" data-direction="reverse" data-role="button" data-theme="b">Back to home</a></p>'
 };
 
 var _fest_pre_festival_message = "<h2 style='text-align:center'>Miami Valley Music Fest</h2><div style='text-align: center;'>" + 

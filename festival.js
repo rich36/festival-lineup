@@ -1,4 +1,7 @@
-
+/*
+festival.js
+This invokes the logic to parse and display the data. This file should not need modified.
+*/
 
 $(document).ready(function()
 {
@@ -52,7 +55,11 @@ function LoadDays(festival)
 		last_element_id = item.id;
 	}
 	
-	$("#lineup_days_list").listview('refresh');
+	try
+	{
+		$("#lineup_days_list").listview('refresh');
+	}	
+	catch(err) {}
 }
 
 function LoadDayData(festival, start_date, end_date, $container, label)
@@ -86,6 +93,10 @@ function LoadDocumentInformation($doc)
 	$('.copyright').html(_fest_info.copyright);
 	
 	$('#no_acts_currently_playing').text(_fest_messages.no_one_currently_playing);
+	
+	$('#about_text').html(_fest_messages.about_page_text);
+	
+	
 }
 
 function LoadShareInformation()
