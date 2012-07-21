@@ -6,5 +6,5 @@ This file contains the implementation specific styles for the site.
 .ui-header 
 {
 	margin: 2px;
-	overflow: visible;
+	overflow: visible ! important;
 }

@@ -3,6 +3,20 @@
 	margin-bottom: 12px;
 }
 
+#now_playing h2
+{
+	margin-bottom: 2px;
+}
+
+#current_time
+{
+	font-size: small;
+	color: #333;
+	margin-top: 0;
+	margin-bottom: 0;
+	
+}
+
 .performer_list
 {
 	list-style: none;

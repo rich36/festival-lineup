@@ -2,15 +2,30 @@
 
 $(document).ready(function()
 {
+	$( document ).bind( "pagechange", function( event, data ){
+		LoadNowPlaying(festival, _fest_timing.current_time);
+	});
+
 	var festival = get_festival_data();
 
-	LoadNowPlaying(festival, _current_time);
+	LoadNowPlaying(festival, _fest_timing.current_time);
 	LoadDays(festival);
 	LoadShareInformation();
 	
 	// Set this information last so that dynamic elements can get updated too
 	LoadDocumentInformation($(this));
+	
+	window.setInterval(function() 
+	{
+		_fest_timing.current_time.setMilliseconds(_fest_timing.current_time.getMilliseconds() + _fest_timing.refresh_interval); 
+		LoadNowPlaying(festival, _fest_timing.current_time);
+	}, _fest_timing.refresh_interval);
 });
+
+function TimerCalled()
+{
+	
+}
 
 function LoadDays(festival)
 {
@@ -107,13 +122,19 @@ function LoadNowPlaying(festival, current_time)
 	else
 	{
 		var $list = $("#now_playing_list");
+		$list.empty();
+		
 		var list_data = "";
 		$.each(response.current_performances, function(index, value) {
 			list_data += "<li>" + FormatPerformance(value) + "</li>";
 		});
 		$list.append(list_data);
+	
 		$("#now_playing").show();
-		$outputElement.hide();
+			$outputElement.hide();
+		
+		$('#current_time').html(FormatTimeString(_fest_timing.current_time)); 
+		//$('#current_time').html(_fest_timing.current_time.toString()); // Good for debugging because it shows seconds
 	}
 }
 
