@@ -29,12 +29,19 @@ function get_festival_data()
 	var tdc = new Artist('The Demolition Crew', '', '');
 	charity_stage.add_performance(tdc, new Date(2012, 7, 11, 16, 30), 60);
 	
-	var mperk = new Artist('Mike Perkins', '', '');
+	var mperk = new Artist('Mike Perkins', 'http://www.mikeperkins.net/', '');
 	charity_stage.add_performance(mperk, new Date(2012, 7, 11, 18, 30), 60);
+	
+	var spikedrivers = new Artist('The Spikedrivers', 'http://www.thespikedrivers.com/', '');
+	charity_stage.add_performance(spikedrivers, new Date(2012, 7, 11, 21, 00), 75);
+	
+	var hookah = new Artist('Ekoostik Hookah', 'http://www.ekoostik.com/', '');
+	charity_stage.add_performance(hookah, new Date(2012, 7, 11, 23, 00), 75);
 	
 	// *** WYSO Stage
 	var wyso_stage = new Stage("WYSO Stage");
 	
+	// Friday
 	var nw = new Artist('Noah Wotherspoon', '', '');
 	wyso_stage.add_performance(nw, new Date(2012, 7, 10, 17, 00), 60);
 	
@@ -44,8 +51,30 @@ function get_festival_data()
 	var sol =  new Artist('SOL', '', '');
 	wyso_stage.add_performance(sol, new Date(2012, 7, 10, 21, 00), 60);
 	
-	var sol =  new Artist('Glostik Willy', '', '');
-	wyso_stage.add_performance(sol, new Date(2012, 7, 11,0, 00), 60);
+	var gw =  new Artist('Glostik Willy', '', '');
+	wyso_stage.add_performance(gw, new Date(2012, 7, 11,0, 00), 60);
+	
+	// Saturday
+	var accapella =  new Artist('Accapella Group', '', '');
+	wyso_stage.add_performance(accapella, new Date(2012, 7, 11, 9, 00), 60);
+	
+	var swrb = new Artist('Stillwater River Band', '', '');
+	wyso_stage.add_performance(swrb, new Date(2012, 7, 11, 11, 30), 60);
+	
+	var soulrebels = new Artist('Soul Rebels', '', '');
+	wyso_stage.add_performance(soulrebels, new Date(2012, 7, 11, 13, 30), 60);
+	
+	var grover = new Artist('Grover', '', '');
+	wyso_stage.add_performance(grover, new Date(2012, 7, 11, 15, 30), 60);
+	
+	var blue_moon_soup = new Artist('Blue Moon Soup', '', '');
+	wyso_stage.add_performance(blue_moon_soup, new Date(2012, 7, 11, 18, 30), 60);
+	
+	var hig_made = new Artist('Higgins-Madewell', '', '');
+	wyso_stage.add_performance(hig_made, new Date(2012, 7, 11, 20, 00), 60);
+	
+	var aliver_hall = new Artist('Aliver Hall', '', '');
+	wyso_stage.add_performance(aliver_hall, new Date(2012, 7, 11, 23, 00), 60);
 	
 	// *** Indoor Stage
 	var indoor_stage = new Stage('Indoor Stage');
@@ -69,10 +98,39 @@ function get_festival_data()
 	var hp = new Artist('Haunted Palace', '', '');
 	indoor_stage.add_performance(hp, new Date(2012, 7, 11,0, 30), 90);
 	
-	var bmm = new Artist('Boogie Matrix Mechanism', '', 'Dancing band');
+	var bmm = new Artist('Boogie Matrix Mechanism', 'http://boogiematrix.com/', 'Dancing band');
 	indoor_stage.add_performance(bmm, new Date(2012, 7, 11,02, 00), 90);
 	
+	// Saturday
+	var giggle_grass = new Artist('Giggle Grass', '', '');
+	indoor_stage.add_performance(giggle_grass, new Date(2012, 7, 11, 11, 30), 60);
+	
+	var jah_sol = new Artist('Jah Sol', '', '');
+	indoor_stage.add_performance(jah_sol, new Date(2012, 7, 11, 13, 00), 60);
+	
+	var paradigm_shift = new Artist('Paradigm Shift', '', '');
+	indoor_stage.add_performance(paradigm_shift, new Date(2012, 7, 11, 14, 30), 60);
+	
+	var city_kings = new Artist('City of Kings', '', '');
+	indoor_stage.add_performance(city_kings, new Date(2012, 7, 11, 16, 00), 60);
+	
+	var slight_reb = new Artist('Slight Rebellion', '', '');
+	indoor_stage.add_performance(slight_reb, new Date(2012, 7, 11, 17, 30), 60);
+	
+	var m87 = new Artist('M87', '', '');
+	indoor_stage.add_performance(m87, new Date(2012, 7, 11, 19, 00), 60);
+	
+	var tat_roots = new Artist('Tattered Roots', '', '');
+	indoor_stage.add_performance(tat_roots, new Date(2012, 7, 11, 20, 30), 60);
+	
+	var scotty_b = new Artist('Scotty Bratcher', '', '');
+	indoor_stage.add_performance(scotty_b, new Date(2012, 7, 11, 22, 00), 60);
+	
+	var skeetones = new Artist('The Skeetones', '', '');
+	indoor_stage.add_performance(skeetones, new Date(2012, 7, 12,02, 00), 90);
+	
 	// *** Acoustic Stage
+	// Friday
 	var acoustic_stage = new Stage("Acoustic Stage");
 	
 	var open_stage = new Artist('Open Stage', '', '');
@@ -90,6 +148,30 @@ function get_festival_data()
 	var suzy = new Artist('Suzy', '', '');
 	acoustic_stage.add_performance(suzy, new Date(2012, 7, 10, 19, 00), 60);
 	
+	// Saturday
+	acoustic_stage.add_performance(open_stage, new Date(2012, 7, 11, 12, 00), 90);
+	
+	var megan_o = new Artist('Megan Osman', '', '');
+	acoustic_stage.add_performance(megan_o, new Date(2012, 7, 11, 14, 00), 50);	
+	
+	var bob_h = new Artist('Bob Heffron', '', '');
+	acoustic_stage.add_performance(bob_h, new Date(2012, 7, 11, 15, 00), 50);	
+	
+	var bret_h = new Artist('Bret Heckerman', '', '');
+	acoustic_stage.add_performance(bret_h, new Date(2012, 7, 11, 16, 00), 50);	
+	
+	var tony_h = new Artist('Tony Herdman', '', '');
+	acoustic_stage.add_performance(tony_h, new Date(2012, 7, 11, 17, 00), 50);	
+	
+	var daniel_d = new Artist('Daniel Dye', '', '');
+	acoustic_stage.add_performance(daniel_d, new Date(2012, 7, 11, 18, 00), 50);	
+	
+	var kris_h = new Artist('Kris Hanson', '', '');
+	acoustic_stage.add_performance(kris_h, new Date(2012, 7, 11, 19, 00), 50);	
+	
+	var belly_d = new Artist('Belly Dancers', '', '');
+	acoustic_stage.add_performance(belly_d, new Date(2012, 7, 11, 20, 00), 50);	
+
 	var festival = new Festival("Miami Valley Music Fest");
 	festival.add_stage(charity_stage);
 	festival.add_stage(wyso_stage);
@@ -104,7 +186,6 @@ function get_festival_data()
 
 $(document).ready(function()
 {
-	
 	var festival = get_festival_data();
 	
 	//var current_time = new Date();
@@ -113,12 +194,12 @@ $(document).ready(function()
 	
 	LoadNowPlaying(festival, current_time);
 	
-	var friday_start_date = new Date(2012, 7, 10, 11,0);
-	var friday_end_date = new Date(2012, 7, 11,4, 59);
+	var friday_start_date = new Date(2012, 7, 10, 11, 0);
+	var friday_end_date = new Date(2012, 7, 11, 4, 59);
 	LoadDayData(festival, friday_start_date, friday_end_date, $("#friday_list"), "Friday");
 	
-	var saturday_start_date = new Date(2012, 7, 11,5, 0);
-	var saturday_end_date = new Date(2012, 7, 12,11,0);
+	var saturday_start_date = new Date(2012, 7, 11, 5, 0);
+	var saturday_end_date = new Date(2012, 7, 12, 11, 0);
 	LoadDayData(festival, saturday_start_date, saturday_end_date, $("#saturday_list"), "Saturday");
 	
 });
@@ -127,17 +208,7 @@ function LoadDayData(festival, start_date, end_date, $container, label)
 {
 	var stages = festival.load_performances_by_date(start_date, end_date);
 	
-	/*
-	 <div  data-role="collapsible" data-collapsed="false">
-		<h3>
-			Charity Rocks! Stage One
-		</h3>
-		<div class="ui-grid-a">
-			<ul class='performer_list'>			
-		<li><span class="now_playing_name">Clark Manson Band</span><br>Charity Rocks! Stage One<br>8:00 PM</li><li><span class="now_playing_name">Electrobek</span><br>Indoor Stage<br>8:00 PM</li><li><span class="now_playing_name">Jack and Joe Waters</span><br>Acoustic Stage<br>8:00 PM</li></ul>
-		</div>
-	</div>
-	*/
+	// Dynamically creating the entries for the different stages
 	for(var i = 0; i < stages.length; i++)
 	{
 		var stage = stages[i];
@@ -145,20 +216,15 @@ function LoadDayData(festival, start_date, end_date, $container, label)
 		var h = '<div data-role="collapsible" data-collapsed="true">';
 		// <h3>Stage Name</h3>
 		h += "<h3>" + stage.name + "</h3>";
-		
-		h += '<div class="ui-grid-a">'; // Start text container
-	
 		h += "<ul class='performer_list'>";
 		$.each(stage.performances, function(index, value) {
 			h += "<li>" + FormatPerformanceNoStage(value) + "</li>";
 		});
 		h += "</ul>";
 		
-		h += "</div>"; // End text container
-		h += "</div>"; // end contaier div
+		h += "</div>"; // end container div
 		$container.append(h);
 	}
-	
 }
 
 function LoadNowPlaying(festival, current_time)
@@ -211,6 +277,7 @@ function FormatTimeString(dt)
 {
 	var hour = dt.getHours();
 	hour = hour > 12 ? hour - 12 : hour;
+	hour = hour == 0 ? 12 : hour;
 	return hour +':'+('0'+dt.getMinutes()).substr(-2,2) + " " + (dt.getHours() >= 12 ? "PM" : "AM");
 }
 

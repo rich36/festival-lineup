@@ -19,15 +19,14 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<h3>
-            Now Playing
-        </h3>
-		<div id="nobody_playing_msg" style="display: none;" class="ui-grid-a"></div>
-        <div id="now_playing" class="ui-grid-a">
-            <div class="ui-block-a">
-				<ul id='now_playing_list' class='performer_list'>			
-				</ul>
-            </div>
+		
+		<div id="nobody_playing_msg" style="display: none;"></div>
+        <div id="now_playing">
+			<h2>
+				Now Playing
+			</h2>
+			<ul id='now_playing_list' class='performer_list'>			
+			</ul>
         </div>
 	
 		<ul data-role="listview" data-divider-theme="b" data-inset="true">
@@ -42,6 +41,22 @@
                 </a>
             </li>
         </ul>
+		
+		<div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li>
+                    <a href="#about" data-theme="" data-icon="info">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#share" data-theme="" data-icon="star">
+                        Share
+                    </a>
+                </li>
+            </ul>
+        </div>
+		
 		<div data-role="footer">
 			<h4>&copy; 2012 MVMF</h4>
 			<p class='footer_tagline'>Site by Rich of <a href='http://www.ninefalsesuns.com'>Nine False Suns</a></p>
@@ -54,7 +69,7 @@
 <div data-role="page" id="friday">
 
 	<div data-role="header">
-		<h1>MVMF Lineup - Friday</h1>
+		<h1>MVMF Lineup</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -76,7 +91,7 @@
 <div data-role="page" id="saturday">
 
 	<div data-role="header">
-		<h1>MVMF Lineup - Saturday</h1>
+		<h1>MVMF Lineup</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
@@ -92,6 +107,65 @@
 		<p class='footer_tagline'>Site by Rich of <a href='http://www.ninefalsesuns.com'>Nine False Suns</a></p>
 	</div><!-- /footer -->
 </div><!-- /page two -->
+
+<!-- Start of third page: #about -->
+<div data-role="page" id="about">
+
+	<div data-role="header">
+		<h1>MVMF Lineup</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	<h2>About</h2>
+	<p><a href='http://www.miamivalleymusicfest.com'>Miami Valley Music Fest</a></p>
+	
+	<p>The Miami Valley Music Festival Association is a 501(c)(3) public charity organized in Miami County, OH with the purpose of hosting music events to raise funds and awareness for local charitable causes. Their “Charity Rocks!” initiative seeks to educate the public on opportunities to give back to the community, and expose younger festival audiences to the public services offered by non-profit organizations. The MVMFA continually develops programming that shows how charitable giving cannot only be easy and accessible, but also fun.</p>
+	
+	<h3>MISSION</h3>
+	
+	<p>To gather people together to celebrate life in a way that is beneficial to themselves and their community; to promote musical diversity, local artists, and charitable giving; and to enhance the mind, body, and spirit of all who attend the festival.</p>
+	
+	
+	<p><a href="#home" data-direction="reverse" data-role="button" data-theme="b">Back to home</a></p>	
+	</div>
+	
+	<div data-role="footer">
+		<h4>&copy; 2012 MVMF</h4>
+		<p class='footer_tagline'>Site by Rich of <a href='http://www.ninefalsesuns.com'>Nine False Suns</a></p>
+	</div>
+</div><!-- /page three -->
+
+<!-- Start of fourth page: #share -->
+<div data-role="page" id="share">
+
+	<div data-role="header">
+		<h1>MVMF Lineup</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	<h2>Share</h2>
+
+	 <div id='share_links' class="ui-grid-a">
+		<div class="ui-block-a">
+			<a href='http://www.facebook.com/sharer/sharer.php?u=__url__'><img src='images/facebook.png' alt='Share this site on Facebook' /></a>
+		</div>
+		<div class="ui-block-b">
+		</div>
+		<div class="ui-block-a">
+		</div>
+		<div class="ui-block-b">
+		</div>
+	</div>
+	
+	<p><a href="#home" data-direction="reverse" data-role="button" data-theme="b">Back to home</a></p>	
+	</div>
+	
+	<div data-role="footer">
+		<h4>&copy; 2012 MVMF</h4>
+		<p class='footer_tagline'>Site by Rich of <a href='http://www.ninefalsesuns.com'>Nine False Suns</a></p>
+	</div>
+</div><!-- /page three -->
+
 
 </body>
 </html>
