@@ -39,13 +39,13 @@ var _fest_days =
 [
 	{
 		name : "Friday",
-		start_time : new Date(2012, 7, 10, 11, 0),
+		start_date : new Date(2012, 7, 10, 11, 0),
 		end_date : new Date(2012, 7, 11, 4, 59),
 		id : "friday"
 	},
 	{
 		name : "Saturday",
-		start_time : new Date(2012, 7, 11, 5, 0),
+		start_date: new Date(2012, 7, 11, 5, 0),
 		end_date : new Date(2012, 7, 12, 11, 0),
 		id : "saturday"
 	}

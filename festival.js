@@ -11,7 +11,8 @@ $(document).ready(function()
 	LoadDocumentInformation($(this));
 	LoadShareInformation();
 	LoadNowPlaying(festival, current_time);
-	LoadDays();
+	LoadDays(festival);
+	/*
 	var friday_start_date = new Date(2012, 7, 10, 11, 0);
 	var friday_end_date = new Date(2012, 7, 11, 4, 59);
 	LoadDayData(festival, friday_start_date, friday_end_date, $("#friday_list"), "Friday");
@@ -19,9 +20,10 @@ $(document).ready(function()
 	var saturday_start_date = new Date(2012, 7, 11, 5, 0);
 	var saturday_end_date = new Date(2012, 7, 12, 11, 0);
 	LoadDayData(festival, saturday_start_date, saturday_end_date, $("#saturday_list"), "Saturday");
+	*/
 });
 
-function LoadDays()
+function LoadDays(festival)
 {
 	// Template for the list item that links to the day page
 	$.template( "lineup_list_item_template", 
@@ -31,8 +33,8 @@ function LoadDays()
 	var page_template = "<div data-role='page' id='${id}'>" + // Open Page
 		"<div data-role='header'><h1 class='page_title'>Lineup</h1></div>" +
 		"<div data-role='content'>" + // Start Content
-		"<h2>Lineup - ${name}</h2>" +
-		"<div id='${name}_list' data-role='collapsible-set' data-theme='' data-content-theme=''></div>" +
+		"<h2>${name}</h2>" +
+		"<div id='${id}_list' data-role='collapsible-set' data-theme='' data-content-theme=''></div>" +
 		"<p><a href='#home' data-direction='reverse' data-role='button' data-theme='b'>Back to home</a></p>	" +
 		"</div>" + // End Content
 		"<div data-role='footer'><h4 class='copyright'>&nbsp;</h4>" + // Start Footer
@@ -46,31 +48,12 @@ function LoadDays()
 	{
 		var item = _fest_days[i];
 		$.tmpl("lineup_list_item_template", item).appendTo("#lineup_days_list");
-		//$.tmpl("page_template", item).insertAfter("#" + last_element_id);
+		$.tmpl("lineup_day_template", item).insertAfter("#" + last_element_id);
+		LoadDayData(festival, item.start_date, item.end_date, $("#" + item.id + "_list"), item.name);
 		last_element_id = item.id;
 	}
 	
 	$("#lineup_days_list").listview('refresh');
-}
-
-function LoadDocumentInformation($doc)
-{
-	$doc.attr("title", _fest_sharing_info.name);
-	
-	$('.page_title').html(_fest_info.page_title);
-	
-	$('.copyright').html(_fest_info.copyright);
-}
-
-function LoadShareInformation()
-{
-	$('#share_links a').each(function() {
-		var url = $(this).attr('href');
-		url = url.replace("__url__", _fest_sharing_info.url);
-		url = url.replace("__name__", _fest_sharing_info.name);
-		url = url.replace("__description__", _fest_sharing_info.description);
-		$(this).attr('href', url);
-	});
 }
 
 function LoadDayData(festival, start_date, end_date, $container, label)
@@ -95,6 +78,28 @@ function LoadDayData(festival, start_date, end_date, $container, label)
 		$container.append(h);
 	}
 }
+
+function LoadDocumentInformation($doc)
+{
+	$doc.attr("title", _fest_sharing_info.name);
+	
+	$('.page_title').html(_fest_info.page_title);
+	
+	$('.copyright').html(_fest_info.copyright);
+}
+
+function LoadShareInformation()
+{
+	$('#share_links a').each(function() {
+		var url = $(this).attr('href');
+		url = url.replace("__url__", _fest_sharing_info.url);
+		url = url.replace("__name__", _fest_sharing_info.name);
+		url = url.replace("__description__", _fest_sharing_info.description);
+		$(this).attr('href', url);
+	});
+}
+
+
 
 function LoadNowPlaying(festival, current_time)
 {
