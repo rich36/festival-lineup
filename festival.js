@@ -1,3 +1,7 @@
+/*
+Configurable values
+*/
+
 function get_festival_data()
 {
 	// *** Charity Stage
@@ -186,9 +190,9 @@ $(document).ready(function()
 {
 	var festival = get_festival_data();
 	
-	//var current_time = new Date();
-	//var current_time = new Date("December 21, 2012 12:00:00");
-	var current_time = new Date(2012, 7, 10, 20, 10);
+	var current_time = new Date();
+	//var current_time = new Date(2012, 11, 21, 23, 59);
+	//var current_time = new Date(2012, 7, 10, 20, 10);
 	
 	LoadNowPlaying(festival, current_time);
 	
@@ -259,7 +263,6 @@ function LoadNowPlaying(festival, current_time)
 		$list.append(list_data);
 		$("#now_playing").show();
 		$outputElement.hide();
-		//$('#output').html($list.html());
 	}
 }
 
@@ -302,5 +305,6 @@ function ShowNotStartedMessage($element)
 
 function ShowFinishedMessage($element)
 {
-	$element.html("The festival is over!");
+	$element.show();
+	$element.html("Thank you to everyone who attended the festival.");
 }

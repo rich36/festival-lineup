@@ -115,7 +115,9 @@ var Festival = function(name)
 			for(var performanceIndex = 0; performanceIndex < currentStage.performances.length; performanceIndex++)
 			{
 				var p = currentStage.performances[performanceIndex];
-				var current_performance_end_time = p.start_time + ((60 * 1000) * p.duration);
+				var current_performance_end_time = new Date(p.start_time);
+				current_performance_end_time.setMinutes(p.start_time.getMinutes() + p.duration);
+				
 				if (last_performance_end_time == null || current_performance_end_time > last_performance_end_time)
 				{
 					last_performance_end_time = current_performance_end_time;
@@ -141,7 +143,8 @@ var Festival = function(name)
 				var p = currentStage.performances[performanceIndex];
 				var current_performance_start_time = p.start_time;
 				var current_performance_end_time = new Date(p.start_time);
-				current_performance_end_time.setMinutes(p.start_time.getMinutes() + p.duration)
+				current_performance_end_time.setMinutes(p.start_time.getMinutes() + p.duration);
+				
 				if (query_time >= current_performance_start_time && query_time <= current_performance_end_time)
 				{
 					performers.push(p);
