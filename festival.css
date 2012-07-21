@@ -20,3 +20,9 @@
 	font-size: small;
 	text-align: center;
 }
+
+/* Share icons */
+#share_links span
+{
+	margin: 8px;
+}

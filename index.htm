@@ -56,6 +56,12 @@
                         Share
                     </a>
                 </li>
+				
+				<li>
+                    <a href="#help" data-theme="" data-icon="alert">
+                        Help
+                    </a>
+                </li>
             </ul>
         </div>
 		
@@ -146,20 +152,23 @@
 
 	<div data-role="content">	
 	<h2>Share</h2>
-
+	<p>Share this website with your friends</p>
+	
 	 <div id='share_links' class="ui-grid-a">
-		<div class="ui-block-a">
+	 <p><a href='mailto:?subject=__name__&body=__description__ __url__'>Email a link to this site</a></p>
+	<p><a href='sms://?body=See%20the%20MVMF%20lineup%20at%20__url__'>Text a link to this site</a></p>
+		<span>
 			<a href='http://www.facebook.com/sharer.php?s=100&p[title]=__name__&p[url]=__url__&p[summary]=__description__'><img src='images/facebook.png' alt='Share this site on Facebook' border='0' /></a>
-		</div>
-		<div class="ui-block-b">
+		</span>
+		<span>
 			<a href='http://twitter.com/home?status=__url__'><img src='images/twitter.png' alt='Share this site on Twitter' border='0' /></a>
-		</div>
-		<div class="ui-block-a">
+		</span>
+		<span>
 			<a href='https://plus.google.com/share?url=__url__'><img src='images/google.png' alt='Share this site on Google Plus' border='0' /></a>
-		</div>
-		<div class="ui-block-b">
+		</span>
+		<span>
 		<a href='http://www.tumblr.com/share/link?url=__url__&name=__name__&description=__description__'><img src='images/tumblr.png' alt='Share this site on Tumblr' border='0' /></a>
-		</div>
+		</span>
 	</div>
 	
 	<p><a href="#home" data-direction="reverse" data-role="button" data-theme="b">Back to home</a></p>	
@@ -169,7 +178,28 @@
 		<h4>&copy; 2012 MVMF</h4>
 		<p class='footer_tagline'>Site by Rich of <a href='http://www.ninefalsesuns.com'>Nine False Suns</a></p>
 	</div>
-</div><!-- /page three -->
+</div><!-- /page four -->
+
+<!-- Start of fourth page: #share -->
+<div data-role="page" id="help">
+
+	<div data-role="header">
+		<h1>MVMF Lineup</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+	<h2>Help</h2>
+
+	 <p>This page could contain contact information in case of an emergency or information on how to find a staff member.</p>
+	 
+	 <p><a href="#home" data-direction="reverse" data-role="button" data-theme="b">Back to home</a></p>	
+	</div>
+	
+	<div data-role="footer">
+		<h4>&copy; 2012 MVMF</h4>
+		<p class='footer_tagline'>Site by Rich of <a href='http://www.ninefalsesuns.com'>Nine False Suns</a></p>
+	</div>
+</div><!-- /page four -->
 
 
 </body>
