@@ -31,7 +31,11 @@ var _fest_messages =  {
 		"<p><img src='images/mvmf.jpg' alt='Miami Valley Music Fest'/></p>" + 
 		"<p style='font-weight: bold;font-size:large;'>Thank you! See you next year!</p>" +
 		"</div>",
-	about_page_text : "<p><a href='http://www.miamivalleymusicfest.com'>Miami Valley Music Fest</a></p>" +
+	about_page_text : "<h3>Miami Valley Music Fest</h3><p style='font-weight: bold;'>Friday, August 10th - Saturday, August 11th</p>" +
+        "<p>Troy Eagles Campground<br/>" +
+        "2252 Troy-Urbana Rd, Troy, OH 45373</p>" +
+    
+        "<p><a href='http://www.miamivalleymusicfest.com'>Miami Valley Music Festival Association</a></p>" +
 		"<p>The Miami Valley Music Festival Association is a 501(c)(3) public charity organized in Miami County, OH " +
 		"with the purpose of hosting music events to raise funds and awareness for local charitable causes. Their &quot;Charity Rocks!&quot; " + 
 		"initiative seeks to educate the public on opportunities to give back to the community, and expose younger " + 
