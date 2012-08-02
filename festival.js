@@ -138,6 +138,7 @@ function LoadNowPlaying(festival, current_time)
 		{
 			$outputElement.show();
 		}
+		
 		ShowFinishedMessage($outputElement);
 	}
 	else
