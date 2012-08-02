@@ -4,13 +4,11 @@ config.js
 This file consists of all of the variables that can be changed in order to set up the site information, 
 artists and performances.
 
-You must 
-
 */
 
 var _fest_timing = {
 	current_time : new Date(), 
-	refresh_interval : 1000 // in milliseconds
+	refresh_interval : 10000 // in milliseconds
 };
 
 // You can artifically adjust the start time to ensure that the lineup will render correctly at different times by 

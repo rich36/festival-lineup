@@ -117,14 +117,27 @@ function LoadNowPlaying(festival, current_time)
 	var $outputElement = $('#nobody_playing_msg');
 	if (response.performance_status == PERFORMANCE_STATUS.NotStarted)
 	{
-		$("#now_playing").hide();
-		$outputElement.show();
+		if ($("#now_playing").is(":visible"))
+		{
+			$("#now_playing").hide();
+		}
+		if (!$outputElement.is(":visible"))
+		{
+			$outputElement.show();
+		}
+			
 		ShowNotStartedMessage($outputElement);
 	}
 	else if (response.performance_status == PERFORMANCE_STATUS.Completed)
 	{	
-		$("#now_playing").hide();
-		$outputElement.show();
+		if ($("#now_playing").is(":visible"))
+		{
+			$("#now_playing").hide();
+		}
+		if (!$outputElement.is(":visible"))
+		{
+			$outputElement.show();
+		}
 		ShowFinishedMessage($outputElement);
 	}
 	else
