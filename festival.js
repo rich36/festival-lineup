@@ -203,12 +203,10 @@ function FormatArtistName(artist)
 
 function ShowNotStartedMessage($element)
 {
-	$element.show();
 	$element.html(_fest_messages.pre_festival_message);
 }
 
 function ShowFinishedMessage($element)
 {
-	$element.show();
 	$element.html(_fest_messages.post_festival_message);
 }
