@@ -112,10 +112,10 @@ function get_festival_data()
 	
 	// Saturday
 	var sl = new Artist('Scott Lee', '', '');
-	charity_stage.add_performance(sl, new Date(2012, 7, 11,10, 30), 60);
+	charity_stage.add_performance(sl, new Date(2012, 7, 11, 10, 30), 60);
 	
 	var ahb = new Artist('The Al Holbrook Band', 'http://www.facebook.com/pages/The-Al-Holbrook-Band/268856187844', '');
-	charity_stage.add_performance(ahb, new Date(2012, 7, 11,12, 00), 60);
+	charity_stage.add_performance(ahb, new Date(2012, 7, 11, 12, 30), 60);
 	
 	var gf = new Artist('Groovestone Fusion Band', 'http://www.reverbnation.com/groovestonefusion', '');
 	charity_stage.add_performance(gf, new Date(2012, 7, 11, 14, 30), 60);
@@ -130,7 +130,7 @@ function get_festival_data()
 	charity_stage.add_performance(spikedrivers, new Date(2012, 7, 11, 21, 00), 75);
 	
 	var hookah = new Artist('Ekoostik Hookah', 'http://www.ekoostik.com/', '');
-	charity_stage.add_performance(hookah, new Date(2012, 7, 11, 23, 00), 75);
+	charity_stage.add_performance(hookah, new Date(2012, 7, 12, 0, 00), 75);
 	
 	// *** WYSO Stage
 	var wyso_stage = new Stage("WYSO Stage");
@@ -150,7 +150,7 @@ function get_festival_data()
 	
 	// Saturday
 	var accapella =  new Artist('Accapella Group', '', '');
-	wyso_stage.add_performance(accapella, new Date(2012, 7, 11, 9, 00), 60);
+	wyso_stage.add_performance(accapella, new Date(2012, 7, 11, 9, 45), 60);
 	
 	var swrb = new Artist('Stillwater River Band', 'https://www.facebook.com/thestillwaterriverband', '');
 	wyso_stage.add_performance(swrb, new Date(2012, 7, 11, 11, 30), 60);
@@ -174,10 +174,10 @@ function get_festival_data()
 	var indoor_stage = new Stage('Indoor Stage');
 	
 	// Friday
-	var mc = new Artist('Marc Cantwit', '', '');
+	var mc = new Artist('Mark Cantwil', '', '');
 	indoor_stage.add_performance(mc, new Date(2012, 7, 10, 17, 00), 60);
 	
-	var btlg = new Artist('Bootleg Blues Band', 'http://www.myspace.com/bootlegbluzband', '');
+	var btlg = new Artist('Bootleg', 'http://www.myspace.com/bootlegbluzband', '');
 	indoor_stage.add_performance(btlg, new Date(2012, 7, 10, 18, 30), 60);
 	
 	var elbk = new Artist('Electrobek', '', '');
@@ -224,44 +224,42 @@ function get_festival_data()
 	// Friday
 	var acoustic_stage = new Stage("Acoustic Stage");
 	
-	var open_stage = new Artist('Open Stage', '', '');
-	acoustic_stage.add_performance(open_stage, new Date(2012, 7, 10, 17, 00), 30);
-	
 	var er = new Artist('Evan Ray', 'http://www.facebook.com/evanraymusic', '');
-	acoustic_stage.add_performance(er, new Date(2012, 7, 10, 17, 30), 60);
-	
-	var bd = new Artist('Belly Dancers', '', '');
-	acoustic_stage.add_performance(bd, new Date(2012, 7, 10, 19, 00), 60);
+	acoustic_stage.add_performance(er, new Date(2012, 7, 10, 17, 00), 60);
 	
 	var jjw = new Artist('Jack and Joe Waters', 'http://www.myspace.com/joejackwaters', '');
-	acoustic_stage.add_performance(jjw, new Date(2012, 7, 10, 20, 00), 60);
+	acoustic_stage.add_performance(jjw, new Date(2012, 7, 10, 18, 00), 60);
+	
+	var bd = new Artist('Belly Dancing Troupe', '', '');
+	acoustic_stage.add_performance(bd, new Date(2012, 7, 10, 19, 00), 60);
+	
+	var tony_h = new Artist('Tony Herdman', 'http://www.facebook.com/tony.herdman.9', '');
+	acoustic_stage.add_performance(tony_h, new Date(2012, 7, 10, 20, 00), 50);	
 	
 	var suzy = new Artist('Suzy', '', '');
-	acoustic_stage.add_performance(suzy, new Date(2012, 7, 10, 19, 00), 60);
+	acoustic_stage.add_performance(suzy, new Date(2012, 7, 10, 21, 00), 60);
 	
 	// Saturday
+	var open_stage = new Artist('Open Stage', '', '');
 	acoustic_stage.add_performance(open_stage, new Date(2012, 7, 11, 12, 00), 90);
 	
 	var megan_o = new Artist('Megan Osman', '', '');
 	acoustic_stage.add_performance(megan_o, new Date(2012, 7, 11, 14, 00), 50);	
 	
-	var bob_h = new Artist('Bob Heffron', '', '');
-	acoustic_stage.add_performance(bob_h, new Date(2012, 7, 11, 15, 00), 50);	
+	var s_d = new Artist('Schwartz/Devore', '', '');
+	acoustic_stage.add_performance(s_d, new Date(2012, 7, 11, 15, 00), 50);	
 	
 	var bret_h = new Artist('Bret Heckerman', '', '');
 	acoustic_stage.add_performance(bret_h, new Date(2012, 7, 11, 16, 00), 50);	
 	
-	var tony_h = new Artist('Tony Herdman', 'http://www.facebook.com/tony.herdman.9', '');
-	acoustic_stage.add_performance(tony_h, new Date(2012, 7, 11, 17, 00), 50);	
+	acoustic_stage.add_performance(bd, new Date(2012, 7, 11, 17, 00), 60);
 	
 	var daniel_d = new Artist('Daniel Dye', 'http://danieldyemusic.com/', '');
 	acoustic_stage.add_performance(daniel_d, new Date(2012, 7, 11, 18, 00), 50);	
 	
 	var kris_h = new Artist('Kris Hanson', 'http://www.reverbnation.com/krishansonsoloact', '');
 	acoustic_stage.add_performance(kris_h, new Date(2012, 7, 11, 19, 00), 50);	
-	
-	var belly_d = new Artist('Belly Dancers', '', '');
-	acoustic_stage.add_performance(belly_d, new Date(2012, 7, 11, 20, 00), 50);	
+
 
 	var festival = new Festival("Miami Valley Music Fest");
 	festival.add_stage(charity_stage);
