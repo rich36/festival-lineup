@@ -107,7 +107,7 @@ function get_festival_data()
 	var cmb = new Artist('Clark Manson Band', 'http://clarkmansonband.com/', '');
 	charity_stage.add_performance(cmb, new Date(2012, 7, 10, 20, 00), 60);
 	
-	var signsol = new Artist('Signs of Life', 'http://www.signsoffloyd.com/fr_welcome.cfm', '');
+	var signsol = new Artist('Signs of Life - The Essence of Pink Floyd', 'http://www.signsoffloyd.com/fr_welcome.cfm', '');
 	charity_stage.add_performance(signsol, new Date(2012, 7, 10, 22, 00), 60);
 	
 	// Saturday
@@ -142,8 +142,8 @@ function get_festival_data()
 	var tp = new Artist('Terrapin Moon', 'http://terrapinmoon.net/', '');
 	wyso_stage.add_performance(tp, new Date(2012, 7, 10, 19, 00), 60);
 	
-	var sol =  new Artist('SOL', 'http://www.facebook.com/pages/SOL/116461645078819', '');
-	wyso_stage.add_performance(sol, new Date(2012, 7, 10, 21, 00), 60);
+	var hig_made = new Artist('Higgins-Madewell', 'http://www.higginsmadewell.com/', '');
+	wyso_stage.add_performance(hig_made, new Date(2012, 7, 10, 21, 00), 60);
 	
 	var gw =  new Artist('Glostik Willy', 'http://glostikwilly.com/fr_gigs.cfm', '');
 	wyso_stage.add_performance(gw, new Date(2012, 7, 11,0, 00), 60);
@@ -164,8 +164,8 @@ function get_festival_data()
 	var blue_moon_soup = new Artist('Blue Moon Soup', 'http://www.reverbnation.com/bluemoonsoup', '');
 	wyso_stage.add_performance(blue_moon_soup, new Date(2012, 7, 11, 18, 30), 60);
 	
-	var hig_made = new Artist('Higgins-Madewell', 'http://www.higginsmadewell.com/', '');
-	wyso_stage.add_performance(hig_made, new Date(2012, 7, 11, 20, 00), 60);
+	var sol =  new Artist('SOL', 'http://www.facebook.com/pages/SOL/116461645078819', '');
+	wyso_stage.add_performance(sol, new Date(2012, 7, 11, 20, 00), 60);
 	
 	var aliver_hall = new Artist('Aliver Hall', 'http://www.aliverhall.com/', '');
 	wyso_stage.add_performance(aliver_hall, new Date(2012, 7, 11, 23, 00), 60);
@@ -198,9 +198,6 @@ function get_festival_data()
 	// Saturday
 	var giggle_grass = new Artist('Giggle Grass', '', '');
 	indoor_stage.add_performance(giggle_grass, new Date(2012, 7, 11, 11, 30), 60);
-	
-	var jah_soul = new Artist('Jah Soul', 'http://www.jahsoulfamily.com/', '');
-	indoor_stage.add_performance(jah_soul, new Date(2012, 7, 11, 13, 00), 60);
 	
 	var paradigm_shift = new Artist('Paradigm Shift', 'http://www.facebook.com/pages/Paradijm-Shift/134930403184170', '');
 	indoor_stage.add_performance(paradigm_shift, new Date(2012, 7, 11, 14, 30), 60);
