@@ -174,7 +174,7 @@ function get_festival_data()
 	var indoor_stage = new Stage('Indoor Stage');
 	
 	// Friday
-	var mc = new Artist('Mark Cantwil', '', '');
+	var mc = new Artist('Mark Cantwil', 'http://www.reverbnation.com/markcantwil', '');
 	indoor_stage.add_performance(mc, new Date(2012, 7, 10, 17, 00), 60);
 	
 	var btlg = new Artist('Bootleg', 'http://www.myspace.com/bootlegbluzband', '');
