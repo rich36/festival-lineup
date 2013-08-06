@@ -190,9 +190,11 @@ function get_festival_data()
 	var mystical_flutes = new Artist('Mystical Flutes and Drums', '', '');
 	stage_3.add_performance(mystical_flutes, new Date(2013, 7, 10, 10, 00), 60);
 	
-	var TBA = new Artist('TBA', '', '');
-	stage_3.add_performance(TBA, new Date(2013, 7, 10, 12, 00), 60);
-	stage_3.add_performance(TBA, new Date(2013, 7, 10, 13, 30), 60);
+	var element_earth = new Artist('Element Earth', '', '');
+	stage_3.add_performance(element_earth, new Date(2013, 7, 10, 12, 00), 60);
+	
+	var hazy_rugged = new Artist('Hazy and The Rugged Child', '', '');
+	stage_3.add_performance(hazy_rugged, new Date(2013, 7, 10, 13, 30), 60);
 	
 	var emily_lost_cat = new Artist('Emily and The Lost Cat Ramblers', '', '');
 	stage_3.add_performance(emily_lost_cat, new Date(2013, 7, 10, 15, 00), 60);
@@ -219,8 +221,11 @@ function get_festival_data()
 	// Friday
 	var acoustic_stage = new Stage("Acoustic Stage");
 	
+	var the_reflection = new Artist('The Reflection', '', '');
+	acoustic_stage.add_performance(the_reflection, new Date(2013, 7, 9, 17, 45), 60);
+	
 	var joe_gillis = new Artist('Joeseph Gillis', '', '');
-	acoustic_stage.add_performance(joe_gillis, new Date(2013, 7, 9, 17, 45), 60);
+	acoustic_stage.add_performance(joe_gillis, new Date(2013, 7, 9, 19, 15), 60);
 	
 	var cinder_home = new Artist('Cinder Home', '', '');
 	acoustic_stage.add_performance(cinder_home, new Date(2013, 7, 9, 20, 45), 60);
