@@ -24,6 +24,7 @@ var _fest_messages =  {
 		"<p style='font-weight: bold; font-size: larger;'>August 9th - 10th</p>" +
 		"<p><img src='images/mvmf.jpg' alt='Miami Valley Music Fest'/></p>" + 
 		"<p style='font-weight: bold;'><a href='http://www.miamivalleymusicfest.com/tickets/' target='_blank'>Buy Tickets Here</a></p>" +
+		"<p style='font-size:smaller'>*Special early bird set from 701 Ashbury on Thursday the 8th at 8:00 PM</p>" +
 		"</div>",
 	post_festival_message : "<div style='text-align: center;'>" + 
 		"<p><img src='images/mvmf.jpg' alt='Miami Valley Music Fest'/></p>" + 
@@ -53,7 +54,7 @@ var _fest_pre_festival_message = "<h2 style='text-align:center'>Miami Valley Mus
 
 var _fest_post_festival_message = "<div style='text-align: center;'>" + 
 	"<p><img src='images/mvmf.jpg' alt='Miami Valley Music Fest'/></p>" + 
-	"<p style='font-weight: bold;font-size:large;'>Thank you! See you next year!</p>" +
+	"<p style='font-weight: bold;font-size:large;'>Thank you to everyone who made this year a success!</p>" +
 	"</div>";
 
 // Page Configuration Options
@@ -75,6 +76,12 @@ var _fest_sharing_info = {
 // The ID is the id of the page - make sure it's a valid, unique HTML element ID
 var _fest_days = 
 [
+	{
+		name : "Thursday",
+		start_date : new Date(2013, 7, 8, 11, 0),
+		end_date : new Date(2013, 7, 9, 4, 59),
+		id : "Thursday"
+	},
 	{
 		name : "Friday",
 		start_date : new Date(2013, 7, 9, 11, 0),
@@ -158,6 +165,10 @@ function get_festival_data()
 	
 	// *** Indoor Stage
 	var stage_3 = new Stage('Stage 3');
+	
+	// Thursday
+	var _701_ashbury = new Artist('701 Ashbury', '', '');
+	stage_3.add_performance(_701_ashbury, new Date(2013, 7, 8, 20, 00), 120);
 	
 	// Friday
 	var fables = new Artist('Fables', '', '');
