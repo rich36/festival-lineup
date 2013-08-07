@@ -11,7 +11,7 @@ var _fest_timing = {
 	refresh_interval : 10000 // in milliseconds
 };
 
-// You can artifically adjust the start time to ensure that the lineup will render correctly at different times by 
+// You can artificially adjust the start time to ensure that the lineup will render correctly at different times by 
 // setting a date here
 //_fest_timing.current_time = new Date(2013, 11, 21, 23, 59); // testing after the festival
 //_fest_timing.current_time = new Date(2013, 7, 10, 20, 10); // testing 
@@ -190,7 +190,7 @@ function get_festival_data()
 	var mystical_flutes = new Artist('Mystical Flutes and Drums', '', '');
 	stage_3.add_performance(mystical_flutes, new Date(2013, 7, 10, 10, 00), 60);
 	
-	var element_earth = new Artist('Element Earth', '', '');
+	var element_earth = new Artist('TBA', '', '');
 	stage_3.add_performance(element_earth, new Date(2013, 7, 10, 12, 00), 60);
 	
 	var hazy_rugged = new Artist('Hazy and The Rugged Child', '', '');
@@ -259,7 +259,7 @@ function get_festival_data()
 	acoustic_stage.add_performance(the_repeating_arms, new Date(2013, 7, 10, 21, 30), 75);	
 	
 	var gin_soaked_angels = new Artist('Gin Soaked Angels', '', '');
-	acoustic_stage.add_performance(gin_soaked_angels, new Date(2013, 7, 10, 32, 00), 75);	
+	acoustic_stage.add_performance(gin_soaked_angels, new Date(2013, 7, 10, 23, 00), 75);	
 	
 	var rumpke_mountain_boys = new Artist('Rumpe Mountain Boys', '', '');
 	acoustic_stage.add_performance(rumpke_mountain_boys, new Date(2013, 7, 11, 00, 30), 90);	
