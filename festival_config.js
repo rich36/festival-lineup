@@ -63,7 +63,7 @@ var _fest_info = {
 // Sharing Information
 var _fest_sharing_info = {
 	name : "Dayton Music Fest Lineup",
-	url :"m.daytonmusicfest.com",
+	url :"http://2011.daytonmusicfest.com/mobile/",
 	description : "Mobile site with the lineup for the 2013 Dayton Music Fest."
 };
 
@@ -121,7 +121,7 @@ function get_festival_data()
 	var oh_condor = new Artist('Oh Condor', 'http://www.ohcondor.com/', '');
 	cst.add_performance(oh_condor, new Date(2013, 9, 5, 23, 30), 60);
 	
-	var connections = new Artist('Connections', '', '');
+	var connections = new Artist('Connections', 'http://connectionsband.tumblr.com/', '');
 	cst.add_performance(connections, new Date(2013, 9, 6, 00, 30), 60);
 	
 	// *** Midwest Outdoor Experience (Eastwood Metropark)
