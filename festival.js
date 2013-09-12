@@ -40,7 +40,7 @@ function LoadDays(festival)
 		"<p><a href='#home' data-direction='reverse' data-role='button' data-theme='b'>Back to home</a></p>	" +
 		"</div>" + // End Content
 		"<div data-role='footer'><h4 class='copyright'>&nbsp;</h4>" + // Start Footer
-		"<p class='footer_tagline'>Site by Rich of <a href='http://www.ninefalsesuns.com'>Nine False Suns</a></p>" +
+		"<p class='footer_tagline'>Site by Rich of <a href='http://www.lostoniddings.com'>Lost on Iddings</a></p>" +
 		"</div>" + // End Footer
 		"</div>"; // Close Page
 	$.template("lineup_day_template", page_template);

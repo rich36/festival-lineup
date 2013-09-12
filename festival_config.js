@@ -22,22 +22,31 @@ var _fest_messages =  {
 	no_one_currently_playing : "No acts are currently playing. Please check the schedule for when the next act is playing.",
 	pre_festival_message : "<h2 style='text-align:center'>Dayton Music Fest</h2><div style='text-align: center;'>" + 
 		"<p style='font-weight: bold; font-size: larger;'>October 4th &amp; 5th</p>" +
-		"<p><img src='images/dmf.jpg' alt='Dayton Music Fest'/></p>" + 
-		"<p style='font-weight: bold;'><a href='http://www.daytonmusicfest.com/' target='_blank'>Buy Tickets Here</a></p>" +
+		"<p><img src='images/dmf.jpg' alt='Dayton Music Fest'/></p>" +
 		"</div>",
 	post_festival_message : "<div style='text-align: center;'>" + 
 		"<p><img src='images/dmf.jpg' alt='Dayton Music Fest'/></p>" + 
 		"<p style='font-weight: bold;font-size:large;'>Thank you! See you next year!</p>" +
 		"</div>",
 	about_page_text : "<p><a href='http://www.daytonmusicfest.com'>Dayton Music Fest</a></p>" +
-		"<p>(About text here)</p>" +
+		"<p>Founded in 2004 by Dan Clayton , Andy Ingram, and Shawn Johnson, Dayton Music Fest sought to showcase the burgeoning music scene bustling in Dayton, OH. " + 
+		"Long a cradle of exceptional creativity, Dayton’s underground talent often gets overlooked by the national scene, as well as those living in the region.</p>" +
+
+		"<p>Now in its 9th year and curated by Don Thrasher & Kyle Melton, DMF seeks to shine a spotlight on Dayton's indie music scene, creating a " +
+		"portrait of where the local scene stands circa 2013. In addition, we seek to showcase expatriates that reside in other areas of the country, but " +
+		"still maintain ties to the Gem City. Taken altogether, DMF is an opportunity to enjoy the rich musical talents coming from Dayton.</p>" +
+
+		"<p>With daytime events open to all ages, we hope that Dayton Music Fest is an event that brings out young and old alike to witness a unique musical event.</p>" +
+
+		"<p>Kyle Melton &amp; Don Thrasher<br/>" +
+
+		"DMF Organizers</p>" +
 		'<p><a href="#home" data-direction="reverse" data-role="button" data-theme="b">Back to home</a></p>'
 };
 
 var _fest_pre_festival_message = "<h2 style='text-align:center'>Dayton Music Fest</h2><div style='text-align: center;'>" + 
 	"<p style='font-weight: bold; font-size: larger;'>October 4th &amp; 5th</p>" +
-	"<p><img src='images/dmf.jpg' alt='Dayton Music Fest'/></p>" + 
-	"<p style='font-weight: bold;'><a href='http://www.daytonmusicfest.com/' target='_blank'>Buy Tickets Here</a></p>" +
+	"<p><img src='images/dmf.jpg' alt='Dayton Music Fest'/></p>" +
 	"</div>";
 
 var _fest_post_festival_message = "<div style='text-align: center;'>" + 
@@ -103,114 +112,116 @@ function get_festival_data()
 	cst.add_performance(nightbeast, new Date(2013, 9, 5, 0, 00), 60);
 	
 	// Saturday
-	var such_a_night = new Artist('Such a Night (The Last Waltz)', '', '');
-	cst.add_performance(such_a_night, new Date(2013, 9, 5, 11, 00), 120);
+	var brat_curse = new Artist('Brat Curse', 'https://www.facebook.com/bratcurse', '');
+	cst.add_performance(brat_curse, new Date(2013, 9, 5, 21, 30), 60);
 	
-	var subterranean_house_band = new Artist('Subterranean House Band', '', '');
-	cst.add_performance(subterranean_house_band, new Date(2013, 9, 5, 14, 00), 60);
+	var boxcar_suite = new Artist('Tim Pritchard &amp; the Boxcar Suite', 'http://www.timpritchard.org/', '');
+	cst.add_performance(boxcar_suite, new Date(2013, 9, 5, 22, 30), 60);
 	
-	var grover = new Artist('Grover', '', '');
-	cst.add_performance(grover, new Date(2013, 9, 5, 16, 00), 60);
+	var oh_condor = new Artist('Oh Condor', 'http://www.ohcondor.com/', '');
+	cst.add_performance(oh_condor, new Date(2013, 9, 5, 23, 30), 60);
 	
-	var glostik_willy = new Artist('Glostik Willy', '', '');
-	cst.add_performance(glostik_willy, new Date(2013, 9, 5, 18, 00), 60);
+	var connections = new Artist('Connections', '', '');
+	cst.add_performance(connections, new Date(2013, 9, 6, 00, 30), 60);
 	
-	var demolition_crew = new Artist('Demolition Crew', '', '');
-	cst.add_performance(demolition_crew, new Date(2013, 9, 5, 20, 00), 60);
-	
-	var signs_of_life = new Artist('Signs of Life', '', '');
-	cst.add_performance(signs_of_life, new Date(2013, 9, 5, 23, 00), 75);
-
-	
-	// *** WYSO Stage
-	var outdoor_exp = new Stage("Stage 2");
+	// *** Midwest Outdoor Experience (Eastwood Metropark)
+	var outdoor_exp = new Stage("Midwest Outdoor Experience (Eastwood Metropark)");
 	
 	// Saturday
 	var josh_eagle =  new Artist('Josh Eagle', 'https://twitter.com/JoshEagleMusic', '');
 	outdoor_exp.add_performance(josh_eagle, new Date(2013, 9, 5, 11, 00), 60);
 	
-	var jdreads_mystiks = new Artist('Jonny Dreads and The Mystiks', '', '');
-	outdoor_exp.add_performance(jdreads_mystiks, new Date(2013, 9, 5, 12, 00), 60);
+	var good_english = new Artist('Good English', 'http://goodenglishband.com/', '');
+	outdoor_exp.add_performance(good_english, new Date(2013, 9, 5, 12, 00), 60);
 	
-	var jones_for_revival = new Artist('Jones For Revival', '', '');
-	outdoor_exp.add_performance(jones_for_revival, new Date(2013, 9, 5, 17, 00), 60);
+	var meghna = new Artist('Meghna &amp; the Majority', 'http://www.meghnamusic.com/', '');
+	outdoor_exp.add_performance(meghna, new Date(2013, 9, 5, 13, 00), 60);
+	
+	var kris_n = new Artist('Kris N.', 'https://www.facebook.com/krisnpoptek', '');
+	outdoor_exp.add_performance(kris_n, new Date(2013, 9, 5, 14, 00), 60);
 	
 	var jah_soul = new Artist('Jah Soul', 'http://www.jahsoulfamily.com', '');
-	outdoor_exp.add_performance(jah_soul, new Date(2013, 9, 5, 19, 00), 60);
+	outdoor_exp.add_performance(jah_soul, new Date(2013, 9, 5, 15, 00), 60);
 	
-	var big_damn_jam = new Artist('Big Damn Jam', '', '');
-	outdoor_exp.add_performance(big_damn_jam, new Date(2013, 9, 5, 21, 00), 60);
+	var starving = new Artist('Starving in the Belly of the Whale', 'http://www.starvinginthebellyofthewhale.com/', '');
+	outdoor_exp.add_performance(starving, new Date(2013, 9, 5, 16, 00), 60);
 	
-	// *** Indoor Stage
-	var stage_3 = new Stage('Stage 3');
+	var repeating_arms = new Artist('The Repeating Arms', 'http://www.reverbnation.com/therepeatingarms1', '');
+	outdoor_exp.add_performance(repeating_arms, new Date(2013, 9, 5, 17, 00), 60);
 	
-	// Saturday
-	var mystical_flutes = new Artist('Mystical Flutes and Drums', '', '');
-	stage_3.add_performance(mystical_flutes, new Date(2013, 9, 5, 10, 00), 60);
+	var new_vega = new Artist('New Vega', 'http://newvega.com/', '');
+	outdoor_exp.add_performance(new_vega, new Date(2013, 9, 5, 18, 00), 60);
 	
-	var element_earth = new Artist('TBA', '', '');
-	stage_3.add_performance(element_earth, new Date(2013, 9, 5, 12, 00), 60);
+	var public_band = new Artist('Public', 'https://www.facebook.com/publictheband?sk=app_123966167614127', '');
+	outdoor_exp.add_performance(public_band, new Date(2013, 9, 5, 19, 00), 60);
 	
-	var hazy_rugged = new Artist('Hazy and The Rugged Child', '', '');
-	stage_3.add_performance(hazy_rugged, new Date(2013, 9, 5, 13, 30), 60);
+	// *** Blind Bobs
+	var blind_bobs = new Stage('Blind Bob\'s');
 	
-	var emily_lost_cat = new Artist('Emily and The Lost Cat Ramblers', '', '');
-	stage_3.add_performance(emily_lost_cat, new Date(2013, 9, 5, 15, 00), 60);
+	var speaking_suns = new Artist('Speaking Suns', 'http://speakingsuns.wordpress.com/', '');
+	blind_bobs.add_performance(speaking_suns, new Date(2013, 9, 5, 21, 30), 60);
 	
-	var belly_dancers = new Artist('Belly Dancers', '', '');
-	stage_3.add_performance(belly_dancers, new Date(2013, 9, 5, 16, 30), 60);
+	var red_hot_rebellion = new Artist('Red Hot Rebellion', 'http://www.redhotrebellion.com', '');
+	blind_bobs.add_performance(red_hot_rebellion, new Date(2013, 9, 5, 22, 30), 60);
 	
-	var prophets_mire = new Artist('Prophets Mire', '', '');
-	stage_3.add_performance(prophets_mire, new Date(2013, 9, 5, 18, 00), 60);
+	blind_bobs.add_performance(public_band, new Date(2013, 9, 5, 23, 30), 60);
 	
-	var kris_hanson = new Artist('Kris Hanson', '', '');
-	stage_3.add_performance(kris_hanson, new Date(2013, 9, 5, 19, 30), 60);
+	var motel_beds = new Artist('Motel Beds', 'http://brotelbeds.com/', '');
+	blind_bobs.add_performance(motel_beds, new Date(2013, 9, 6, 00, 30), 60);
 	
-	var elektrobek = new Artist('Elektrobek', '', '');
-	stage_3.add_performance(elektrobek, new Date(2013, 9, 5, 21, 00), 60);
+	// *** Oregon Express
+	var oe  = new Stage("Oregon Express");
 	
-	var box_truck_rescue = new Artist('Box Truck Rescue', '', '');
-	stage_3.add_performance(box_truck_rescue, new Date(2013, 9, 5, 22, 30), 60);
+	var the_giant_steps = new Artist('The Giant Steps', 'http://thegiantsteps.net/', '');
+	oe.add_performance(the_giant_steps, new Date(2013, 9, 5, 21, 00), 60);
 	
-	var hieronymus_project = new Artist('The Hieronymus Project', '', '');
-	stage_3.add_performance(hieronymus_project, new Date(2013, 7, 11, 00, 00), 60);
+	var playfully_yours = new Artist('Playfully Yours', 'https://www.facebook.com/yours.playfully', '');
+	oe.add_performance(playfully_yours, new Date(2013, 9, 5, 22, 00), 60);
 	
-	// *** Acoustic Stage
-	var acoustic_stage = new Stage("Acoustic Stage");
+	var city_of_kings = new Artist('City of Kings', 'http://www.cityofkingsmusic.com/', '');
+	oe.add_performance(city_of_kings, new Date(2013, 9, 5, 23, 00), 60);
 	
-	// Saturday
-	var megan_o = new Artist('Megan Osman', '', '');
-	acoustic_stage.add_performance(megan_o, new Date(2013, 9, 5, 12, 00), 75);	
+	var team_void = new Artist('Team Void', 'http://www.reverbnation.com/teamvoidlucharockers', '');
+	oe.add_performance(team_void, new Date(2013, 9, 6, 00, 00), 60);
 	
-	var sweet_betsy = new Artist('Sweet Betsy', '', '');
-	acoustic_stage.add_performance(sweet_betsy, new Date(2013, 9, 5, 13, 30), 75);	
 	
-	var ambrogi_bros = new Artist('The Bros. Ambrogi', '', '');
-	acoustic_stage.add_performance(ambrogi_bros, new Date(2013, 9, 5, 15, 00), 75);	
+	// *** Trolley Stop
+	var trolley_stop = new Stage("Trolley Stop");
 	
-	var scott_lee = new Artist('Scott Lee and the Whiskey River Boys', '', '');
-	acoustic_stage.add_performance(scott_lee, new Date(2013, 9, 5, 16, 30), 75);
+	var luke_frazier = new Artist('Luke Frazier', 'http://lukefrazier.bandcamp.com/', '');
+	trolley_stop.add_performance(luke_frazier, new Date(2013, 9, 5, 21, 00), 60);
 	
-	var sharon_lane = new Artist('Sharon Lane', '', '');
-	acoustic_stage.add_performance(sharon_lane, new Date(2013, 9, 5, 18, 00), 75);	
+	var will_the_acct = new Artist('William the Accountant', 'http://www.williamtheaccountant.com/', '');
+	trolley_stop.add_performance(will_the_acct, new Date(2013, 9, 5, 22, 00), 60);
 	
-	var higgins_madewell = new Artist('Higgins-Madewell', '', '');
-	acoustic_stage.add_performance(higgins_madewell, new Date(2013, 9, 5, 17, 30), 75);	
-
-	var the_repeating_arms = new Artist('The Repeating Arms', '', '');
-	acoustic_stage.add_performance(the_repeating_arms, new Date(2013, 9, 5, 21, 30), 75);	
+	var trey_stone = new Artist('Trey Stone &amp; the Ringers', 'http://www.reverbnation.com/treystone777', '');
+	trolley_stop.add_performance(trey_stone, new Date(2013, 9, 5, 23, 00), 60);
 	
-	var gin_soaked_angels = new Artist('Gin Soaked Angels', '', '');
-	acoustic_stage.add_performance(gin_soaked_angels, new Date(2013, 9, 5, 23, 00), 75);	
+	trolley_stop.add_performance(new_vega, new Date(2013, 9, 6, 00, 00), 60);
 	
-	var rumpke_mountain_boys = new Artist('Rumpe Mountain Boys', '', '');
-	acoustic_stage.add_performance(rumpke_mountain_boys, new Date(2013, 7, 11, 00, 30), 90);	
-
+	// *** Tumbleweed
+	var tumbleweed = new Stage('Tumbleweed');
+	
+	var turkish_delights = new Artist('The Turkish Delights', 'http://www.reverbnation.com/theturkishdelights', '');
+	tumbleweed.add_performance(turkish_delights, new Date(2013, 9, 5, 21, 30), 60);
+	
+	var new_old_fashioned = new Artist('The New Old-Fashioned', 'https://www.facebook.com/TheNewOldFashioned', '');
+	tumbleweed.add_performance(new_old_fashioned, new Date(2013, 9, 5, 22, 30), 60);
+	
+	var abertooth_lincoln = new Artist('Abertooth Lincoln', 'http://www.reverbnation.com/abertoothlincoln', '');
+	tumbleweed.add_performance(abertooth_lincoln, new Date(2013, 9, 5, 23, 30), 60);
+	
+	var parlour_tricks = new Artist('C. Wright\'s Parlour Tricks', 'http://www.reverbnation.com/cwrightsparlourtricks', '');
+	tumbleweed.add_performance(parlour_tricks, new Date(2013, 9, 6, 00, 30), 60);
+	
+	
 	var festival = new Festival("Dayton Music Fest");
-	festival.add_stage(cst);
 	festival.add_stage(outdoor_exp);
-	festival.add_stage(stage_3);
-	festival.add_stage(acoustic_stage);
+	festival.add_stage(cst);
+	festival.add_stage(blind_bobs);
+	festival.add_stage(oe);
+	festival.add_stage(trolley_stop);
+	festival.add_stage(tumbleweed);
 	
 	return festival;
 
