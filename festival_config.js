@@ -143,7 +143,7 @@ function get_festival_data()
 	var jah_soul = new Artist('Jah Soul', 'http://www.jahsoulfamily.com', '');
 	outdoor_exp.add_performance(jah_soul, new Date(2013, 9, 5, 15, 00), 60);
 	
-	var starving = new Artist('Starving in the Belly of the Whale', 'http://www.starvinginthebellyofthewhale.com/', '');
+	var starving = new Artist('Dan Raridan', 'http://www.reverbnation.com/danraridan', '');
 	outdoor_exp.add_performance(starving, new Date(2013, 9, 5, 16, 00), 60);
 	
 	var repeating_arms = new Artist('The Repeating Arms', 'http://www.reverbnation.com/therepeatingarms1', '');
@@ -178,7 +178,7 @@ function get_festival_data()
 	var playfully_yours = new Artist('Playfully Yours', 'https://www.facebook.com/yours.playfully', '');
 	oe.add_performance(playfully_yours, new Date(2013, 9, 5, 22, 00), 60);
 	
-	var city_of_kings = new Artist('City of Kings', 'http://www.cityofkingsmusic.com/', '');
+	var city_of_kings = new Artist('Dumbell', 'http://www.reverbnation.com/dumbell‎', '');
 	oe.add_performance(city_of_kings, new Date(2013, 9, 5, 23, 00), 60);
 	
 	var team_void = new Artist('Team Void', 'http://www.reverbnation.com/teamvoidlucharockers', '');
