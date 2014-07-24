@@ -226,7 +226,7 @@ function get_festival_data()
 	var page_bellar = new Artist('Page Bellar', 'http://www.paigebeller.com/', '');
 	acoustic_stage.add_performance(page_bellar, new Date(2014, 7, 1, 20, 00), 60);
 	
-	var far_from_eden = new Artist('Far From Eden', 'https://www.facebook.com/farfromeden', '');
+	var far_from_eden = new Artist('Far From Eden', 'https://www.facebook.com/farfromedenmusic', '');
 	acoustic_stage.add_performance(far_from_eden, new Date(2014, 7, 1, 21, 30), 60);
 	
 	var gin_soaked_angels = new Artist('Gin Soaked Angels', 'https://www.facebook.com/ginsoakedangels', '');
