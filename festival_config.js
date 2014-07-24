@@ -200,8 +200,8 @@ function get_festival_data()
 	var hurl_and_the_spins = new Artist('Hurl  &amp; The Spins', 'http://www.furpeaceranch.com/', '');
 	stage_3.add_performance(hurl_and_the_spins, new Date(2014, 7, 2, 17, 30), 60);
 	
-	var elektrobek = new Artist('Elektrobek', '', '');
-	stage_3.add_performance(elektrobek, new Date(2014, 7, 2, 19, 00), 60);
+	var electrobek = new Artist('Electrobek', 'https://www.facebook.com/ElectrobekJakubek', '');
+	stage_3.add_performance(electrobek, new Date(2014, 7, 2, 19, 00), 60);
 	
 	var tony_herdman = new Artist('Tony Herdman Band', '', '');
 	stage_3.add_performance(tony_herdman, new Date(2014, 7, 2, 20, 30), 60);
